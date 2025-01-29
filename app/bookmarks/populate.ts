@@ -22,7 +22,11 @@ const AUTHORS: AuthorType[] = [
 ]
 
 const BOOKMARKS: BookmarkType[] = [
-  { title: "Platzi", url: "https://platzi.com", fav: true },
+  {
+    title: "Platzi",
+    url: "https://platzi.com",
+    fav: true,
+  },
   { title: "jonalvarezz", url: "https://jonalvarezz.com", fav: true },
   {
     title: "Next.js Documentation",

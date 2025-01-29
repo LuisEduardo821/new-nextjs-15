@@ -23,12 +23,13 @@ export async function addExpense(data: FormData) {
 
   console.log("Adding expense:", { name, amount })
 
-  await sql`
-    INSERT INTO expenses
-      (name, amount)
-    VALUES
-      (${name.toString()}, ${amount})
-    `
+  // await sql`
+  //   INSERT INTO expenses
+  //     (name, amount)
+  //   VALUES
+  //     (${name.toString()}, ${amount})
+  //   `
+  await sql`INSERT INTO expenses (name, amount) VALUES (${name.toString()}, ${amount})`
 
   revalidatePath("/expense-tracker")
 }
